@@ -20,7 +20,7 @@ export default function App() {
 
   if(isFontLoaded) return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Jai Shree Ram</Text>
       <StatusBar style="auto" />
     </View>
   );
