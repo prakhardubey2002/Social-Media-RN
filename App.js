@@ -2,7 +2,23 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  return (
+
+  const [isFontLoaded, setIsFontLoaded] = useState(false);
+
+  useEffect(() => {
+    Font.loadAsync({
+      Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
+      PoppinsSemiBold: require('./assets/fonts/Poppins-SemiBold.ttf'),
+      PoppinsBold: require('./assets/fonts/Poppins-Bold.ttf'),
+    })
+      .then(() => {
+        setIsFontLoaded(true)
+      });
+  }, []);
+
+  if(!isFontLoaded) return null;
+
+  if(isFontLoaded) return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
