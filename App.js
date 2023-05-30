@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { useState,useEffect } from 'react';
 import * as Font from 'expo-font';
+
+import { StatusBar } from 'expo-status-bar';
+import {  StyleSheet, } from 'react-native';
+import { useState,useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Comment from './assets/Screens/Comment';
 import { NavigationContainer } from '@react-navigation/native';
-import Sce from './assets/Screens/Sce';
+
+import Setting from './assets/Screens/Setting';
+import Comment from './assets/Screens/Comment';
 const Stack = createStackNavigator();
 export default function App() {
 
@@ -33,9 +35,9 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="Comment">
+      <Stack.Navigator initialRouteName="Setting">
       <Stack.Screen name="Comment" component={Comment}  />
-      <Stack.Screen name="Sce" component={Sce}  />
+      <Stack.Screen name="Setting" component={Setting}  />
       
     </Stack.Navigator>
       <StatusBar style="auto" />
