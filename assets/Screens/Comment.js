@@ -16,6 +16,10 @@ export default function Comment({ navigation }) {
       title: "Comment",
       headerBackTitleVisible: false,
       headerTitleAlign: "left",
+      headerStyle: {
+        // backgroundColor: '#EC303A',
+        height: 50,
+      },
       headerTitle: () => (
         <View style={{
           flexDirection: "row",
