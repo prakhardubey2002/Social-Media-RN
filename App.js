@@ -1,8 +1,8 @@
 import * as Font from 'expo-font';
 
 import { StatusBar } from 'expo-status-bar';
-import {  StyleSheet, } from 'react-native';
-import { useState,useEffect } from 'react';
+import { StyleSheet, } from 'react-native';
+import { useState, useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -24,11 +24,11 @@ export default function App() {
       });
   }, []);
 
-  if(!isFontLoaded) return null;
+  if (!isFontLoaded) return null;
 
-  if(isFontLoaded) return (
+  if (isFontLoaded) return (
     <NavigationContainer>
-    {/* <View style={styles.container}> */}
+      {/* <View style={styles.container}> */}
       {/* <Text>Jai Shree Ram</Text>
       <Button
         title="Go to Details"
@@ -36,12 +36,12 @@ export default function App() {
         onPress={() => navigation.navigate('Home')}
       /> */}
       <Stack.Navigator initialRouteName="Setting">
-      <Stack.Screen name="Comment" component={Comment}  />
-      <Stack.Screen name="Setting" component={Setting}  />
-      
-    </Stack.Navigator>
+        <Stack.Screen name="Comment" component={Comment} />
+        <Stack.Screen name="Setting" component={Setting} />
+
+      </Stack.Navigator>
       <StatusBar style="auto" />
-    {/* </View> */}
+      {/* </View> */}
     </NavigationContainer>
   );
 }

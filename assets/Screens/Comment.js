@@ -6,6 +6,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { FlatList } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import comments from './Dummy';
+import { height, width } from '../../config/dimension'
 export default function Comment({ navigation }) {
   const [text, setText] = useState("Comment")
   useEffect(() => {
@@ -167,6 +168,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    width:width,
+    minHeight:height,
   },
   Comment: {
     display: "flex",
@@ -245,14 +248,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-    position: 'relative',
+    position: 'fixed',
+    bottom: '0',
     backgroundColor: '#FFFFFF',
     borderRadius: 30,
     paddingHorizontal: 10,
-    width: "92%",
+    width: "90%",
     height: "86px",
-    marginLeft: "auto",
-    marginRight: "auto",
+    marginLeft: "5%",
+    marginRight: "5%",
+    justifyContent: 'center',
+
   },
   commenticon: {
     width: 40,
