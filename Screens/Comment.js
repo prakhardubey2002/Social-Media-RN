@@ -6,7 +6,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { FlatList } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import comments from './Dummy';
-import { height, width } from '../../config/dimension'
+import { height, width } from '../config/dimension'
 export default function Comment({ navigation }) {
   const [text, setText] = useState("Comment")
   useEffect(() => {

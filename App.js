@@ -6,9 +6,10 @@ import { useState, useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import Setting from './assets/Screens/Setting';
-import Comment from './assets/Screens/Comment';
-import AddAddress from './assets/Screens/AddAddress';
+import Setting from './Screens/Setting';
+import Comment from './Screens/Comment';
+import AddAddress from './Screens/AddAddress';
+import Notification from './Screens/Notification';
 const Stack = createStackNavigator();
 export default function App() {
 
@@ -36,10 +37,11 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="Setting">
+      <Stack.Navigator initialRouteName="Notification">
         <Stack.Screen name="Comment" component={Comment} />
         <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="AddAddress" component={AddAddress} />
+        <Stack.Screen name='Notification' component={Notification} />
 
       </Stack.Navigator>
       <StatusBar style="auto" />
