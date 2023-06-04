@@ -20,6 +20,11 @@ export default function App() {
       Poppins: require('./assets/fonts/Poppins-Regular.ttf'),
       PoppinsSemiBold: require('./assets/fonts/Poppins-SemiBold.ttf'),
       PoppinsBold: require('./assets/fonts/Poppins-Bold.ttf'),
+      UrbanistRegular: require('./assets/fonts/Urbanist-Regular.ttf'),
+      UrbanistBold: require('./assets/fonts/Urbanist-Bold.ttf'),
+      UrbanistMedium: require('./assets/fonts/Urbanist-Medium.ttf'),
+      UrbanistSemiBold: require('./assets/fonts/Urbanist-SemiBold.ttf'),
+      // UrbanistLight: require('./assets/fonts/Urbanist-Light.ttf'),
     })
       .then(() => {
         setIsFontLoaded(true)
