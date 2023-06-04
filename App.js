@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Setting from './assets/Screens/Setting';
 import Comment from './assets/Screens/Comment';
+import AddAddress from './assets/Screens/AddAddress';
 const Stack = createStackNavigator();
 export default function App() {
 
@@ -38,6 +39,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Setting">
         <Stack.Screen name="Comment" component={Comment} />
         <Stack.Screen name="Setting" component={Setting} />
+        <Stack.Screen name="AddAddress" component={AddAddress} />
 
       </Stack.Navigator>
       <StatusBar style="auto" />

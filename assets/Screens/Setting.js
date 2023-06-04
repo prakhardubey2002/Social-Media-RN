@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native';
 import { height, width } from '../../config/dimension'
 import Svg, { G, Path, Defs, ClipPath, Mask } from "react-native-svg"
 import { EvilIcons } from '@expo/vector-icons';
