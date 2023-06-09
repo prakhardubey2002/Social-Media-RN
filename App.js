@@ -10,6 +10,9 @@ import Setting from './Screens/Setting';
 import Comment from './Screens/Comment';
 import AddAddress from './Screens/AddAddress';
 import Notification from './Screens/Notification';
+import LikedPeople from './Screens/LikedPeople';
+import ArStart from './Screens/ArStart';
+
 const Stack = createStackNavigator();
 export default function App() {
 
@@ -24,6 +27,11 @@ export default function App() {
       UrbanistBold: require('./assets/fonts/Urbanist-Bold.ttf'),
       UrbanistMedium: require('./assets/fonts/Urbanist-Medium.ttf'),
       UrbanistSemiBold: require('./assets/fonts/Urbanist-SemiBold.ttf'),
+      Poppins_medium: require("./assets/fonts/Poppins_medium.ttf"),
+      Poppins_black: require("./assets/fonts/Poppins_black.ttf"),
+      Mulish_semibold: require("./assets/fonts/Mulish_semibold.ttf"),
+      ABeeZee_regular: require("./assets/fonts/ABeeZee_regular.ttf"),
+      ABeeZee_regular_italic: require("./assets/fonts/ABeeZee_regular_italic.ttf"),
       // UrbanistLight: require('./assets/fonts/Urbanist-Light.ttf'),
     })
       .then(() => {
@@ -42,11 +50,13 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="Notification">
+      <Stack.Navigator initialRouteName="AR">
         <Stack.Screen name="Comment" component={Comment} />
         <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="AddAddress" component={AddAddress} />
         <Stack.Screen name='Notification' component={Notification} />
+        <Stack.Screen name='LikedPeople' component={LikedPeople} />
+       <Stack.Screen name="AR" component={ArStart} />
 
       </Stack.Navigator>
       <StatusBar style="auto" />

@@ -290,6 +290,6 @@ const styles = StyleSheet.create({
   sendIcon: {
     position: 'absolute',
     right: 24,
-  },
+  }
 
 });
