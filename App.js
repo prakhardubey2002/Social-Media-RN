@@ -12,6 +12,7 @@ import AddAddress from './Screens/AddAddress';
 import Notification from './Screens/Notification';
 import LikedPeople from './Screens/LikedPeople';
 import ArStart from './Screens/ArStart';
+import ARDatainput from './Screens/ArDatainput';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -50,13 +51,14 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="AR">
+      <Stack.Navigator initialRouteName="ArDatainput">
         <Stack.Screen name="Comment" component={Comment} />
         <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="AddAddress" component={AddAddress} />
         <Stack.Screen name='Notification' component={Notification} />
         <Stack.Screen name='LikedPeople' component={LikedPeople} />
        <Stack.Screen name="AR" component={ArStart} />
+       <Stack.Screen name='ArDatainput' component={ARDatainput}/>
 
       </Stack.Navigator>
       <StatusBar style="auto" />
