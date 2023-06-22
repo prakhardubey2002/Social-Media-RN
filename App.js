@@ -14,6 +14,7 @@ import LikedPeople from './Screens/LikedPeople';
 import ArStart from './Screens/ArStart';
 import ARDatainput from './Screens/ArDatainput';
 import ArSlider from './Screens/ArSlider';
+import ChatBot from './Screens/ChatBot';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -52,15 +53,17 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="ArSlider">
-        <Stack.Screen name="Comment" component={Comment} />
+      <Stack.Navigator initialRouteName="ChatBot">
         <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="AddAddress" component={AddAddress} />
+        {/* Social Media */}
+        <Stack.Screen name="Comment" component={Comment} />
         <Stack.Screen name='Notification' component={Notification} />
         <Stack.Screen name='LikedPeople' component={LikedPeople} />
         <Stack.Screen name="AR" component={ArStart} />
         <Stack.Screen name='ArDatainput' component={ARDatainput} />
         <Stack.Screen name="ArSlider" component={ArSlider} />
+        <Stack.Screen name="ChatBot" component={ChatBot} />
       </Stack.Navigator>
       <StatusBar style="auto" />
       {/* </View> */}

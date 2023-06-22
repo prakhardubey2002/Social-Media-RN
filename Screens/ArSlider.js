@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image, Pressable } from "react-native";
-// import { useNavigation } from "@react-navigation/native";
+import { Text, StyleSheet, View, Image, Pressable } from "react-native";  
 import { FontSize, FontFamily, Color, Border, Padding } from "./Styles/ArStyles";
 import { useState, useEffect } from 'react';
 const ArSlider = ({ navigation }) => {
