@@ -12,7 +12,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
 const MainChatBox = ({ navigation }) => {
-    const [text, setText] = useState("Search")
+    const [text, setText] = useState("Search");
+    const blurhash = "LPF~]]Mm?^w?inyARRadJ0R7o[S7"
     useEffect(() => {
         // console.log(text)
         // Header
@@ -96,7 +97,7 @@ const MainChatBox = ({ navigation }) => {
         <View style={styles.main}>
             <View style={styles.searchsection}>
                 <Svg
-                style={styles.backicon}
+                    style={styles.backicon}
                     width={13}
                     height={10}
                     viewBox="0 0 14 10"
@@ -111,7 +112,7 @@ const MainChatBox = ({ navigation }) => {
                 </Svg>
 
                 <Svg
-                style={styles.searchicon}
+                    style={styles.searchicon}
                     width={16}
                     height={16}
                     viewBox="0 0 16 16"
@@ -135,27 +136,465 @@ const MainChatBox = ({ navigation }) => {
 
 
             </View>
+            <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                <TouchableOpacity style={{
+                    marginRight: '12px',
+                    width: 'fit-content',
+                    // height: '100%',
+                    background: '#EC303A',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                        width: 0,
+                        height: 4,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 20,
+                    borderRadius: 22,
+                    paddingVertical: '4px',
+                    paddingHorizontal: '18px',
+                    flexDirection: 'row',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }} >
+                    <Text style={{
+                        fontFamily: 'Mulish',
+                        fontSize: 14,
+                        // fontWeight: '600',
+                        lineHeight: 16,
+                        letterSpacing: 0,
+                        textAlign: 'center',
+                        color: '#fff',
+                        // fontWeight: '100',
+                    }} >General</Text>
+                    <Text style={{
+                        fontFamily: 'Mulish',
+                        fontSize: 14,
+                        // fontWeight: '600',
+                        lineHeight: 16,
+                        letterSpacing: 0,
+                        textAlign: 'center',
+                        marginLeft: '8px',
+                        color: '#fff',
+                    }} >33</Text>
+
+                </TouchableOpacity>
+                <TouchableOpacity style={{
+                    // marginRight: '8px',
+                    width: 'fit-content',
+                    // height: '100%',
+                    background: '#fff',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                        width: 0,
+                        height: 4,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 20,
+                    borderRadius: 22,
+                    paddingVertical: '4px',
+                    paddingHorizontal: '18px',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }} >
+                    <Text style={{
+                        fontFamily: 'Mulish',
+                        fontSize: 14,
+                        // fontWeight: '600',
+                        lineHeight: 16,
+                        letterSpacing: 0,
+                        textAlign: 'center',
+                        color: '#b1b8bf',
+                        // fontWeight: '100',
+                    }} >Vendor</Text>
+                    <Text style={{
+                        fontFamily: 'Mulish',
+                        fontSize: 14,
+                        // fontWeight: '600',
+                        lineHeight: 16,
+                        letterSpacing: 0,
+                        textAlign: 'center',
+                        marginLeft: '8px',
+                        color: '#fff',
+                        backgroundColor: '#666666',
+                        padding: '4px',
+                        paddingHorizontal: '8px',
+                        borderRadius: '50%',
+                    }} >6</Text>
+
+                </TouchableOpacity>
+            </View>
+
+
+            <View style={{
+                borderBottomWidth: 0.5,
+                borderBottomColor: 'rgba(102, 102, 102, 0.29)',
+            }} >
+                <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                    <View style={{ flexDirection: 'row' }}>
+                        <Image
+                            style={styles.image}
+                            source="https://picsum.photos/seed/696/3000/2000"
+                            placeholder={blurhash}
+                            contentFit="cover"
+                            transition={1000}
+                        />
+                        <View style={{ marginLeft: '1rem', flexDirection: 'column', maxWidth: '50%' }}>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                fontWeight: '400',
+                                lineHeight: 17,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Gunther Beard</Text>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                                fontWeight: '400',
+                                lineHeight: 22,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                maxWidth: '80%',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Quisque blandit arcu quis turpis tincidunt facilisis…</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Text style={{}}>15 min </Text>
+                            <Text style={{
+                                fontFamily: 'Mulish',
+                                fontSize: 14,
+                                // fontWeight: '600',
+                                lineHeight: 16,
+                                letterSpacing: 0,
+                                textAlign: 'center',
+                                marginLeft: '8px',
+                                color: '#fff',
+                                backgroundColor: '#ec303a',
+                                padding: '4px',
+                                paddingHorizontal: '8px',
+                                borderRadius: '4rem',
+
+                            }}>1 </Text>
+                        </View>
+
+
+
+                    </View>
+
+                </View>
+
+                <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                    <View style={{ flexDirection: 'row' }}>
+                        <Image
+                            style={styles.image}
+                            source="https://picsum.photos/seed/696/3000/2000"
+                            placeholder={blurhash}
+                            contentFit="cover"
+                            transition={1000}
+                        />
+                        <View style={{ marginLeft: '1rem', flexDirection: 'column', maxWidth: '50%' }}>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                fontWeight: '400',
+                                lineHeight: 17,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Gunther Beard</Text>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                                fontWeight: '400',
+                                lineHeight: 22,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                maxWidth: '80%',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Quisque blandit arcu quis turpis tincidunt facilisis…</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Text style={{}}>15 min </Text>
+                            <Text style={{
+                                fontFamily: 'Mulish',
+                                fontSize: 14,
+                                // fontWeight: '600',
+                                lineHeight: 16,
+                                letterSpacing: 0,
+                                textAlign: 'center',
+                                marginLeft: '8px',
+                                color: '#fff',
+                                backgroundColor: '#ec303a',
+                                padding: '4px',
+                                paddingHorizontal: '8px',
+                                borderRadius: '4rem',
+
+                            }}>1 </Text>
+                        </View>
+
+
+
+                    </View>
+
+                </View>
+                <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                    <View style={{ flexDirection: 'row' }}>
+                        <Image
+                            style={styles.image}
+                            source="https://picsum.photos/seed/696/3000/2000"
+                            placeholder={blurhash}
+                            contentFit="cover"
+                            transition={1000}
+                        />
+                        <View style={{ marginLeft: '1rem', flexDirection: 'column', maxWidth: '50%' }}>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                fontWeight: '400',
+                                lineHeight: 17,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Gunther Beard</Text>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                                fontWeight: '400',
+                                lineHeight: 22,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                maxWidth: '80%',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Quisque blandit arcu quis turpis tincidunt facilisis…</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Text style={{}}>5 hour </Text>
+                            <Text style={{
+
+
+                            }}> </Text>
+                        </View>
+
+
+
+                    </View>
+
+                </View>
+                <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                    <View style={{ flexDirection: 'row' }}>
+                        <Image
+                            style={styles.image}
+                            source="https://picsum.photos/seed/696/3000/2000"
+                            placeholder={blurhash}
+                            contentFit="cover"
+                            transition={1000}
+                        />
+                        <View style={{ marginLeft: '1rem', flexDirection: 'column', maxWidth: '50%' }}>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                fontWeight: '400',
+                                lineHeight: 17,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Gunther Beard</Text>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                                fontWeight: '400',
+                                lineHeight: 22,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                maxWidth: '80%',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Quisque blandit arcu quis turpis tincidunt facilisis…</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Text style={{}}>15 hour </Text>
+                            <Text style={{
+                                fontFamily: 'Mulish',
+                                fontSize: 14,
+                                // fontWeight: '600',
+                                lineHeight: 16,
+                                letterSpacing: 0,
+                                textAlign: 'center',
+                                marginLeft: '8px',
+                                color: '#fff',
+                                backgroundColor: '#ec303a',
+                                padding: '4px',
+                                paddingHorizontal: '8px',
+                                borderRadius: '4rem',
+
+                            }}>1 </Text>
+                        </View>
+
+
+
+                    </View>
+
+                </View>
+
+            </View>
+            <View>
+                <Text style={{
+                    fontFamily: 'UrbanistMedium',
+                    fontSize: 18,
+                    fontWeight: '700',
+                    lineHeight: 22,
+                    letterSpacing: 0,
+                    textAlign: 'center',
+                    padding: '1rem',
+                }}>
+                    Aasabie Community
+                </Text>
+                <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                    <View style={{ flexDirection: 'row' }}>
+                        <Image
+                            style={styles.image}
+                            source="https://picsum.photos/seed/696/3000/2000"
+                            placeholder={blurhash}
+                            contentFit="cover"
+                            transition={1000}
+                        />
+                        <View style={{ marginLeft: '1rem', flexDirection: 'column', maxWidth: '50%' }}>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                fontWeight: '400',
+                                lineHeight: 17,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Gunther Beard</Text>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                                fontWeight: '400',
+                                lineHeight: 22,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                maxWidth: '80%',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Quisque blandit arcu quis turpis tincidunt facilisis…</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Text style={{}}>Mon</Text>
+                            <Text style={{
+
+
+                            }}> </Text>
+                        </View>
+
+
+
+                    </View>
+
+                </View>
+                <View style={{ padding: '1rem', flexDirection: 'row' }} >
+                    <View style={{ flexDirection: 'row' }}>
+                        <Image
+                            style={styles.image}
+                            source="https://picsum.photos/seed/696/3000/2000"
+                            placeholder={blurhash}
+                            contentFit="cover"
+                            transition={1000}
+                        />
+                        <View style={{ marginLeft: '1rem', flexDirection: 'column', maxWidth: '50%' }}>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                fontWeight: '400',
+                                lineHeight: 17,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Gunther Beard</Text>
+                            <Text style={{
+                                fontFamily: 'Poppins',
+                                fontSize: 12,
+                                fontWeight: '400',
+                                lineHeight: 22,
+                                letterSpacing: 1,
+                                textAlign: 'left',
+                                width: 'fit-content',
+                                maxWidth: '80%',
+                                // backgroundColor: '#F2F2F2',
+                            }} >Quisque blandit arcu quis turpis tincidunt facilisis…</Text>
+                        </View>
+
+                        <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Text style={{}}>Mon</Text>
+                            <Text style={{
+
+
+                            }}> </Text>
+                        </View>
+
+
+
+                    </View>
+
+                </View>
+            </View>
+
+
+
+
+
+
+
+
+
+
+
         </View>
+
+
+
+
+
+
+
     )
 }
 
 export default MainChatBox
 
 const styles = StyleSheet.create({
-    main:{
-        display: 'flex',
+    main: {
+        // display: 'flex',
         backgroundColor: '#fff',
         height: height,
         width: width,
     },
-    searchsection:{
-        display: 'flex',
+    searchsection: {
+        // display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         padding: '2rem',
         position: 'relative',
-    },  
+    },
     inputchat: {
         width: '84%',
         minHeight: '32px',
@@ -173,16 +612,25 @@ const styles = StyleSheet.create({
         left: 40,
         paddingHorizontal: '3rem',
         paddingVertical: '0.4rem',
+        borderWidth: 1,
+        borderColor: '#6666664A',
         // color: '#2B2B2B',
 
     },
-    searchicon:{
+    searchicon: {
         position: 'absolute',
         left: 50,
     },
-    backicon:{
+    backicon: {
         position: 'absolute',
-        left: 10,
-    }
+        left: 12,
+    },
+    image: {
+        width: 55,
+        height: 55,
+        borderRadius: "4rem"
+
+    },
+
 
 })
