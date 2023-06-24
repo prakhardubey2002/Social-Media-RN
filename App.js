@@ -18,6 +18,7 @@ import ChatBot from './Screens/ChatBot';
 import AskQueries from './Screens/AskQueries';
 import ChatBox from './Screens/ChatBox';
 import MainChatBox from './Screens/MainChatBox';
+import ChatSecond from './Screens/ChatSecond';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -56,7 +57,7 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="MainChatBox">
+      <Stack.Navigator initialRouteName="ChatSecond">
         <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="AddAddress" component={AddAddress} />
         {/* Social Media */}
@@ -70,6 +71,7 @@ export default function App() {
         <Stack.Screen name='AskQueries' component={AskQueries} />
         <Stack.Screen name="ChatBox" component={ChatBox} />
         <Stack.Screen name="MainChatBox" component={MainChatBox} />
+        <Stack.Screen name="ChatSecond" component={ChatSecond}/>
       </Stack.Navigator>
       <StatusBar style="auto" />
       {/* </View> */}
