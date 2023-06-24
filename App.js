@@ -16,6 +16,7 @@ import ARDatainput from './Screens/ArDatainput';
 import ArSlider from './Screens/ArSlider';
 import ChatBot from './Screens/ChatBot';
 import AskQueries from './Screens/AskQueries';
+import ChatBox from './Screens/ChatBox';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -54,7 +55,7 @@ export default function App() {
         
         onPress={() => navigation.navigate('Home')}
       /> */}
-      <Stack.Navigator initialRouteName="AskQueries">
+      <Stack.Navigator initialRouteName="ChatBox">
         <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="AddAddress" component={AddAddress} />
         {/* Social Media */}
@@ -66,6 +67,7 @@ export default function App() {
         <Stack.Screen name="ArSlider" component={ArSlider} />
         <Stack.Screen name="ChatBot" component={ChatBot} />
         <Stack.Screen name='AskQueries' component={AskQueries} />
+        <Stack.Screen name="ChatBox" component={ChatBox} />
       </Stack.Navigator>
       <StatusBar style="auto" />
       {/* </View> */}
