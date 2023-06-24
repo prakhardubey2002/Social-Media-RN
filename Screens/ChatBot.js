@@ -96,48 +96,60 @@ const ChatBot = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "white" }} >
             <StatusBar style='light' />
-            <View>
+            {/* <View> */}
 
-                {/* UpperBar */}
-                <View style={{ flexDirection: "row", alignItems: "center", padding: 20 }} >
+            {/* UpperBar */}
+            <View style={{ flexDirection: "row", alignItems: "center", padding: 20 }} >
 
-                    <View>
-                        <Ionicons name="arrow-back" size={24} color="#EC303A" />
-                    </View>
+                <View>
+                    <Ionicons name="arrow-back" size={24} color="#EC303A" />
+                </View>
 
-                    <View style={{ flexDirection: "row", alignItems: "center" }} >
+                <View style={{ flexDirection: "row", alignItems: "center" }} >
+                    <Image
+                        style={styles.image}
+                        source="https://picsum.photos/seed/696/3000/2000"
+                        placeholder={blurhash}
+                        contentFit="cover"
+                        transition={1000}
+                    />
+                    <Text style={styles.ChatBotText}>ChatBot</Text>
+                </View>
+            </View>
+            {/* Message Screen */}
+            <View style={styles.messagescreen} >
+                {/* <ScrollView> */}
+                <View>
+                    <View style={{ flexDirection: "row", alignItems: "flex-end", justifyContent: "space-between" }}>
+                        <View style={styles.mesageBox} >
+                            <Text style={styles.chatbotmessage} >
+                                Hi there! Welcome to our chat. Are you looking for negotiation on this
+                                product?
+                            </Text>
+                        </View>
                         <Image
-                            style={styles.image}
+                            style={styles.pimage}
                             source="https://picsum.photos/seed/696/3000/2000"
                             placeholder={blurhash}
                             contentFit="cover"
                             transition={1000}
                         />
-                        <Text style={styles.ChatBotText}>ChatBot</Text>
+                    </View>
+                    <View style={{ flex: 1, flexDirection: "row", paddingTop: "1rem", paddingBottom: "1rem" }} >
+                        <Text style={styles.optionBox} >No</Text>
+                        <Text style={styles.optionBox} >Yes</Text>
                     </View>
                 </View>
-                {/* Message Screen */}
-                <View style={{ flex: 1, backgroundColor: "white", padding: "1rem", position: "relative" }} >
-                    {/* <ScrollView> */}
-                    <View>
-                        <View>
-                            <View style={styles.mesageBox} >
-                                <Text style={styles.chatbotmessage} >
-                                    Hi there! Welcome to our chat. Are you looking for negotiation on this
-                                    product?
-                                </Text>
-                            </View>
-                        </View>
-                        <View style={{ flex: 1, flexDirection: "row",paddingTop:"1rem",paddingBottom:"1rem" }} >
-                            <Text style={styles.optionBox} >No</Text>
-                            <Text style={styles.optionBox} >Yes</Text>
-                        </View>
-                    </View>
-                    {/* </ScrollView> */}
-                </View>
 
-
+                {/* </ScrollView> */}
             </View>
+            <View>
+                <Text style={styles.inputchat} >
+fasvl
+                </Text>
+            </View>
+
+            {/* </View> */}
         </SafeAreaView >
     )
 }
@@ -159,6 +171,12 @@ const styles = StyleSheet.create({
         height: 38,
         borderRadius: "4rem"
     },
+    pimage: {
+        width: 38,
+        height: 38,
+        borderRadius: "4rem",
+        marginLeft: "12"
+    },
     chatbotmessage: {
         width: 192,
         color: "#2b2b2b",
@@ -177,6 +195,8 @@ const styles = StyleSheet.create({
         // height: 83,
         // position: "absolute",
         padding: 15,
+        marginRight: "1rem"
+
     },
     optionBox: {
         borderRadius: 15,
@@ -197,4 +217,18 @@ const styles = StyleSheet.create({
         // justifyContent: "center",
         // alignItems:"center",
     },
+    messagescreen: {
+        // height: "36.5rem",
+        flex: 1,
+        flexDirection: "column",
+        backgroundColor: "white",
+        padding: "1rem",
+        // position: "relative",
+        justifyContent: "flex-end",
+        alignItems: "flex-end",
+        backgroundColor: "red",
+    },
+    inputchat:{
+        height:"5rem"
+    }
 })
