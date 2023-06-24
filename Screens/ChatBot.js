@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { Image } from 'expo-image';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import { height, width } from '../config/dimension'
-import Svg, { G, Path, Defs, ClipPath, Mask } from "react-native-svg"
+import Svg, { G, Path, Defs, ClipPath, Mask, Rect } from "react-native-svg"
 import { EvilIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -14,6 +14,7 @@ import { ScrollView } from 'react-native';
 
 const ChatBot = ({ navigation }) => {
     const blurhash = "LPF~]]Mm?^w?inyARRadJ0R7o[S7"
+    const [text, setText] = useState("Messages")
     useEffect(() => {
         // console.log(text)
         // Header
@@ -143,10 +144,105 @@ const ChatBot = ({ navigation }) => {
 
                 {/* </ScrollView> */}
             </View>
-            <View>
-                <Text style={styles.inputchat} >
-fasvl
-                </Text>
+            <View style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginBottom: 10,
+                // position: 'fixed',
+                // bottom: '0',
+                backgroundColor: '#FFFFFF',
+                borderRadius: 30,
+                paddingHorizontal: 10,
+                width: "90%",
+                height: "86px",
+                marginLeft: "5%",
+                marginRight: "5%",
+                justifyContent: 'center',
+            }}>
+                <TextInput
+                    style={styles.inputchat}
+                    onChangeText={setText}
+                    value={text}
+                />
+                {/* <TouchableOpacity style={styles.sendIcon}>
+                    <Ionicons name="md-send" size={24} color="blue" />
+                </TouchableOpacity> */}
+                <View style={styles.sendIcon}>
+                    <Svg style={styles.svgIcon}
+                        width={17}
+                        height={17}
+                        viewBox="0 0 17 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+
+                    >
+                        <G clipPath="url(#clip0_967_57385)">
+                            <Path
+                                d="M11.261 10.094a3.19 3.19 0 01-5.522 0m4.635 4.501a6.368 6.368 0 114.221-4.221l-4.221 4.221z"
+                                stroke="#8B8B8B"
+                                strokeWidth={2}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                            <Path
+                                d="M6.11 7.969a.797.797 0 100-1.594.797.797 0 000 1.594zM10.89 7.969a.797.797 0 100-1.594.797.797 0 000 1.594z"
+                                fill="#8B8B8B"
+                            />
+                        </G>
+                        <Defs>
+                            <ClipPath id="clip0_967_57385">
+                                <Path fill="#fff" d="M0 0H17V17H0z" />
+                            </ClipPath>
+                        </Defs>
+                    </Svg>
+
+
+                    <Svg
+                    style={styles.svgIcon}
+                        width={17}
+                        height={17}
+                        viewBox="0 0 17 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+
+                    >
+                        <Path
+                            d="M4.073 8.5a.531.531 0 00-1.062 0v4.25c0 .685.555 1.24 1.24 1.24h8.5a1.24 1.24 0 001.239-1.24V8.5a.531.531 0 10-1.063 0v4.25c0 .098-.079.177-.177.177h-8.5a.177.177 0 01-.177-.177V8.5z"
+                            fill="#8B8B8B"
+                        />
+                        <Path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M6.825 10.273c0 .49.396.886.885.886h1.587a.885.885 0 00.886-.886V7.006l.156-.015.393-.038a.87.87 0 00.7-1.24 10.668 10.668 0 00-2.24-3.094l-.074-.07a.888.888 0 00-1.228 0l-.074.07a10.666 10.666 0 00-2.24 3.094.87.87 0 00.7 1.24l.393.038.156.015v3.267zm1.062-3.76a.531.531 0 00-.498-.53c-.206-.013-.412-.03-.617-.05l-.115-.01a9.603 9.603 0 011.847-2.49 9.605 9.605 0 011.846 2.49l-.114.01c-.206.02-.412.037-.618.05a.531.531 0 00-.498.53v3.583H7.887V6.513z"
+                            fill="#8B8B8B"
+                        />
+                    </Svg>
+
+
+
+                    <Svg
+                    style={styles.svgIcon}
+                        width={21}
+                        height={20}
+                        viewBox="0 0 21 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+
+                    >
+                        <Rect x={0.769531} width={20} height={20} rx={5} fill="#EC303A" />
+                        <Path
+                            transform="rotate(90 7.185 10.385)"
+                            fill="#EC303A"
+                            d="M0 0H12.8V12.8H0z"
+                        />
+                        <Path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M15.583 6.003c.636-.053.987.659.66 1.147l-.105.159a48.46 48.46 0 01-5.43 6.74c-.499.517-1.286.061-1.217-.584l.301-2.808a.644.644 0 00-.363-.658L6.924 8.863c-.605-.274-.548-1.177.104-1.357a45.875 45.875 0 018.37-1.488l.185-.015zm-.075.809l-.044.003c-2.707.226-5.39.696-8.018 1.407L9.76 9.27c.565.256.893.855.828 1.472l-.275 2.563a47.672 47.672 0 005.16-6.44l.035-.053z"
+                            fill="#fff"
+                        />
+                    </Svg>
+                </View>
             </View>
 
             {/* </View> */}
@@ -226,9 +322,34 @@ const styles = StyleSheet.create({
         // position: "relative",
         justifyContent: "flex-end",
         alignItems: "flex-end",
-        backgroundColor: "red",
+        // backgroundColor: "red",
     },
-    inputchat:{
-        height:"5rem"
+    inputchat: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: '#f4f4f4',
+        backgroundColor: '#f4f4f4',
+        borderRadius: 30,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        height: "56px",
+        width: "92%",
+        fontFamily: 'Poppins',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        fontSize: 10,
+        lineHeight: 13,
+        position: "relative",
+
+    },
+    sendIcon: {
+        position: 'absolute',
+        right: 24,
+        flexDirection: "row",
+        
+    },
+    svgIcon:{
+        marginLeft: 10,
     }
+
 })
